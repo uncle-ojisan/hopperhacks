@@ -6,7 +6,10 @@ html{
 body {
     overflow: hidden;
     height:100vh;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -16,29 +19,44 @@ body {
     align-items: center;
     height:100%;
     width:100%;
+    padding: 0;
 }   
 
 .header{
     font-family: "Papyrus", Fantasy;
+    max-height: fit-content;
 }
 
+/* change to scroll img */
 .scroll{
     margin: 0;
-    height: 70%;
+    height: 100%;
     width: 70%;
-    background-color: brown;
+    background-color: brown; 
     /* background-image: url('assets/background.png'); */
     background-size: 100% 100% ;
     background-repeat: no-repeat;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* add background img for top and bottom of scroll*/
+.scrollEnds{
+    height: 20vh;
+    width: 100%;
+    background-color: white;
+}
+
+.scrollEnds:hover{
+    height: 50%;
+}
+
 /* change */
 .scroll:hover {
-    height: 5%;
+    height: 40%;
 }
 
 .map {
@@ -53,6 +71,7 @@ body {
 /* change */
 .map:hover{
     background-image: none;
+    max-height: 0;
 }
 
 h1 {
@@ -70,6 +89,7 @@ h1 {
 
 .map button:hover{
     color: red;
+    background-color: black;
 }
 
 #b1{
@@ -115,9 +135,15 @@ h1 {
 /* questoin box */
 .QuestionBox {
     border: 11px double #ff6550;
+    height: 5%;
     width: fit-content;
     padding-right: 20px;
 }
+
+.QuestionBox:hover{
+   height: auto;
+}
+
 .question {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 20px;
