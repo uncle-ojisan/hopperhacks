@@ -1,3 +1,28 @@
-body {
+.map {
+    margin:0;
+    height: 70%;
+    width: 70%;
     background-image: url('assets/background.png');
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.container {
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow: hidden;
+    height:100vh;
+    
+}
+
+h1 {
+    font-size:50pt;
 }
