@@ -1,20 +1,40 @@
-.map {
-    margin:0;
+html{
+    background-color: blanchedalmond;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+}   
+
+.header{
+    font-family: "Papyrus", Fantasy;
+}
+
+.scroll{
+    margin: 0;
+    padding: 0%;
     height: 70%;
     width: 70%;
     background-image: url('assets/background.png');
     background-size: 100% 100% ;
     background-repeat: no-repeat;
-    
-    
 }
 
-.container {
-    height:100%;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.map {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 90%;
+    width: auto;
+    background-image: url('assets/background.png');
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;+
 }
 
 body {
@@ -31,10 +51,47 @@ h1 {
     background-color: transparent;
     background-repeat:no-repeat;
     font-size: large;
+    font-weight: bolder;
     border: none;
     cursor:pointer;
 }
 
 .map button:hover{
     color: red;
+}
+
+.b1{
+    position: relative;
+    top: 10%;
+    left: 0%
+}
+
+.b2{
+    position: relative;
+    top: 10%;
+    left: 10%
+}
+
+.b3{
+    position: relative;
+    top: 10%;
+    left: 20%
+}
+
+.b4{
+    position: relative;
+    top: 10%;
+    left: 30%
+}
+
+.b5{
+    position: relative;
+    top: 10%;
+    left: 40%
+}
+
+.b6{
+    position: relative;
+    top: 10%;
+    left: 50%
 }
