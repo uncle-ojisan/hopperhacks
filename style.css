@@ -36,6 +36,11 @@ body {
     align-items: center;
 }
 
+/* change */
+.scroll:hover {
+    height: 5%;
+}
+
 .map {
     margin: 0;
     height: 90%;
@@ -43,6 +48,11 @@ body {
     background-image: url('assets/background.png');
     background-size: 100% 100% ;
     background-repeat: no-repeat;
+}
+
+/* change */
+.map:hover{
+    background-image: none;
 }
 
 h1 {
@@ -96,4 +106,45 @@ h1 {
     position: relative;
     top: 10%;
     left: 50%
+}
+
+
+
+
+
+/* questoin box */
+.QuestionBox {
+    border: 11px double #ff6550;
+    width: fit-content;
+    padding-right: 20px;
+}
+.question {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.answers {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.answer:hover {
+    background-color: red;
+    
+    cursor:pointer;
+}
+
+.answer {
+    padding:10px;
 }

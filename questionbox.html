@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .QuestionBox {
+            border: 11px double #ff6550;
+            width: fit-content;
+            padding-right: 20px;
+        }
+        .question {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none solid rgb(68, 68, 68);
+            font-style: italic;
+            font-variant: small-caps;
+            text-transform: uppercase;
+        }
+
+        .answers {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+
+        .answer:hover {
+            background-color: red;
+            
+            cursor:pointer;
+        }
+
+        .answer {
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="QuestionBox">
+        <h1 class="question">WHAT IS THE ANSWER TO THIS QUESTION, YE SCALLYWAG?</h1>
+        <div class="answers">
+            <p class="answer">ANSWER1</p>
+            <p class="answer">ANSWER2</p>
+            <p class="answer">ANSWER3</p>
+            <p class="answer">ANSWER4</p>
+        </div>
+    </div>
+</body>
