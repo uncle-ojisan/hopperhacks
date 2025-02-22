@@ -23,10 +23,14 @@ html{
     /* background-image: url('assets/background.png'); */
     background-size: 100% 100% ;
     background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .map {
-    margin: 5% auto;
+    margin: 0;
     height: 90%;
     width: 90%;
     background-image: url('assets/background.png');
