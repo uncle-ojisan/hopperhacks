@@ -17,24 +17,21 @@ html{
 
 .scroll{
     margin: 0;
-    padding: 0%;
-    height: 70%;
+    height: 100%;
     width: 70%;
-    background-image: url('assets/background.png');
+    background-color: brown;
+    /* background-image: url('assets/background.png'); */
     background-size: 100% 100% ;
     background-repeat: no-repeat;
 }
 
 .map {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 5% auto;
     height: 90%;
-    width: auto;
+    width: 90%;
     background-image: url('assets/background.png');
     background-size: 100% 100% ;
-    background-repeat: no-repeat;+
+    background-repeat: no-repeat;
 }
 
 body {
