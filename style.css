@@ -26,3 +26,15 @@ body {
 h1 {
     font-size:50pt;
 }
+
+.map button {     
+    background-color: transparent;
+    background-repeat:no-repeat;
+    font-size: large;
+    border: none;
+    cursor:pointer;
+}
+
+.map button:hover{
+    color: red;
+}
