@@ -53,7 +53,7 @@ body {
     padding: 0;
     height: 100%;
     /* width: 70%; */
-    width: calc(80vh * 1100/672);
+    width: calc(80vh * 2386/1062);
     /* aspect-ratio:1100/672; */
     /* background-color: brown;  */
     /* background-image: url('assets/background.png'); */
@@ -71,8 +71,11 @@ body {
 
 }
 
-.scroll.folded{
-    /* background-image: none; */
+/* .scroll.folded{
+    height: 22vh;
+} */
+
+.scroll:hover{
     height: 22vh;
 }
 
@@ -102,10 +105,10 @@ body {
     position: absolute;
     height: calc(80vh - 22vh);
     /* width: 100%; */
-    aspect-ratio: 1100/672;
+    aspect-ratio: 2386/1062;
     /* height: 71.5%;
     width: 90%; */
-    background-image: url('assets/ResizedWorld.png');
+    background-image: url('assets/WorldMap.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -119,7 +122,7 @@ body {
 .mapContainer {
     margin: 0;
     height: 59vh;
-    width: calc(59vh * 1100/672);
+    width: calc(59vh * 2386/1062);
     padding:0px;
     overflow:hidden;
     position: relative;
@@ -244,7 +247,9 @@ h1 {
     height:100%;
 }
 
-.QuestionBox div {
+
+
+.QuestionBox>div {
     width:100%;
     height:100%;
     border: 11px dotted #00eeff;
@@ -285,7 +290,7 @@ h1 {
     position: absolute;
     text-align: center;
     font-family: pixelFontBold;
-    font-size: 30pt;
+    font-size: 20pt;
     
     max-width:100%;
     word-wrap: break-word;
@@ -312,6 +317,50 @@ h1 {
     grid-template-rows: auto auto;
 }
 
+.answersArea>div {
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width:50%; */
+    
+}
+
+.answer {
+    background-image: url(assets/WoodenPlank.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    width:80%;
+    height:50%;
+
+    opacity:1;
+    transition-property: opacity;
+    transition-duration: .5s;
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    cursor: grab;
+    
+}
+
+
+.answer p{
+    position: absolute;
+    text-align: center;
+    font-family: pixelFontBold;
+
+    
+    
+}
+
+.answer.visible {
+    opacity: 1;
+}
 
 
 /* .answer:hover {

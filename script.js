@@ -1,7 +1,7 @@
 const mapButtons = document.querySelectorAll(".map button");
 const scroll = document.querySelector(".scroll")
-const questionText = document.querySelector(".question");
-const answers = document.querySelectorAll(".answer");
+const messageBox = document.querySelector(".messageBox");
+const answers = document.querySelectorAll(".answer p");
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 let messageContainer = document.querySelector(".messageArea div");
@@ -48,12 +48,20 @@ async function typewrite(box, text) {
     }
 }
 
+async function appearAndWrite(box, text) {
+    box.classList.add("visible")
+    await delay(2000);
+    await typewrite(box, text)
+}
+
 async function writeQuestion(question) {
-    await typewrite(questionText, question[0])
-    await typewrite(answers[0], question[1][0])
-    await typewrite(answers[1], question[1][1])
-    await typewrite(answers[2], question[1][2])
-    await typewrite(answers[3], question[1][3])
+    await appearAndWrite(messageBox, question[0])
+
+    
+    await appearAndWrite(answers[0], question[1][0])
+    await appearAndWrite(answers[1], question[1][1])
+    await appearAndWrite(answers[2], question[1][2])
+    await appearAndWrite(answers[3], question[1][3])
 }
 
 mapButtons.forEach(button => {
@@ -81,5 +89,5 @@ mapButtons.forEach(button => {
 // window.addEventListener("resize", resizeText);
 // resizeText();
 
-// writeQuestion(getQuestions("Somalia")[0]);
+writeQuestion(getQuestions("Somalia")[0]);
 // console.log(questionText);
