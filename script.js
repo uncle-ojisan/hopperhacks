@@ -701,20 +701,25 @@ answerBoxes.forEach(box => {
 // resizeText();
 
 mapButtons.forEach(button=>{
-    button.addEventListener("click", ()=>{
+    button.addEventListener("click", async ()=>{
         if (!busy && completed[button.id] != true) {
-
+            busy = true;
             attempts = 0;
             correctCount = 0;
 
             currentPlaceName = button.id;
             placeName.textContent = currentPlaceName;
             scroll.classList.add("folded");
+
+            await delay(1500);
+
             messageArea.classList.add("visible");
             pirateArea.classList.add("visible");
             placeName.classList.add("visible");
             console.log(currentPlaceName);
             currentQuestions = getQuestions(currentPlaceName);
+
+            
             writeQuestion(currentQuestions[0]);
         }
     });
