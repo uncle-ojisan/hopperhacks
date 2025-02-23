@@ -1,5 +1,15 @@
 html{
     background-color: blanchedalmond;
+    overflow-y: scroll;
+}
+
+body {
+    overflow: hidden;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -9,38 +19,59 @@ html{
     align-items: center;
     height:100%;
     width:100%;
+    padding: 0;
 }   
 
 .header{
     font-family: "Papyrus", Fantasy;
+    max-height: fit-content;
 }
 
+/* change to scroll img */
 .scroll{
     margin: 0;
-    padding: 0%;
-    height: 70%;
+    height: 100%;
     width: 70%;
-    background-image: url('assets/background.png');
+    background-color: brown; 
+    /* background-image: url('assets/background.png'); */
     background-size: 100% 100% ;
     background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* add background img for top and bottom of scroll*/
+.scrollEnds{
+    height: 20vh;
+    width: 100%;
+    background-color: white;
+}
+
+.scrollEnds:hover{
+    height: 50%;
+}
+
+/* change */
+.scroll:hover {
+    height: 40%;
 }
 
 .map {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0;
     height: 90%;
-    width: auto;
-    background-image: url('assets/background.png');
+    width: 90%;
+    background-image: url('assets/PixelartMap.png');
     background-size: 100% 100% ;
     background-repeat: no-repeat;
 }
 
-body {
-    overflow: hidden;
-    height:100vh;
-    
+/* change */
+.map:hover{
+    background-image: none;
+    max-height: 0;
 }
 
 h1 {
@@ -58,40 +89,88 @@ h1 {
 
 .map button:hover{
     color: red;
+    background-color: black;
 }
 
-.b1{
+#b1{
     position: relative;
     top: 10%;
     left: 0%
 }
 
-.b2{
+#b2{
     position: relative;
     top: 10%;
     left: 10%
 }
 
-.b3{
+#b3{
     position: relative;
     top: 10%;
     left: 20%
 }
 
-.b4{
+#b4{
     position: relative;
     top: 10%;
     left: 30%
 }
 
-.b5{
+#b5{
     position: relative;
     top: 10%;
     left: 40%
 }
 
-.b6{
+#b6{
     position: relative;
     top: 10%;
     left: 50%
+}
+
+
+
+
+
+/* questoin box */
+.QuestionBox {
+    border: 11px double #ff6550;
+    height: 5%;
+    width: fit-content;
+    padding-right: 20px;
+}
+
+.QuestionBox:hover{
+   height: auto;
+}
+
+.question {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.answers {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.answer:hover {
+    background-color: red;
+    
+    cursor:pointer;
+}
+
+.answer {
+    padding:10px;
 }

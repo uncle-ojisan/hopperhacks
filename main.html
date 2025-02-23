@@ -8,25 +8,48 @@
     <script src = "script.js"></script>
 </head>
 <body>
+    <div class="header">
+        <h1> Pirate Trivia Hunting</h1>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <h1>Pirate Trivia Hunting</h1>
-        </div>
-        
         <div class="scroll">
+            <div class="scrollEnds"></div>
+
             <div class = "map" >
                 <h1></h1>
-                <button class="b1" type="button">X1</button>
-                <button class="b2" type="button">X2</button>
-                <button class="b3" type="button">X3</button>
-                <button class="b4" type="button">X4</button>
-                <button class="b5" type="button">X5</button>
-                <button class="b6" type="button">X6</button>
+                <button id="b1" type="button">
+                    <img src="./assets/Anchor.png" alt="X">
+                </button>
+                <button id="b2" type="button">
+                    <img src="./assets/Compass.png" alt="X">
+                </button>
+                <button id="b3" type="button">
+                    <img src="./assets/PirateFlag.png" alt="X">
+                </button>
+                <button id="b4" type="button">
+                    <img src="./assets/Anchor.png" alt="X">
+                </button>
+                <button id="b5" type="button">
+                    <img src="./assets/Compass.png" alt="X">
+                </button>
+                <button id="b6" type="button">
+                    <img src="./assets/PirateFlag.png" alt="X">
+                </button>
             </div>
+
+            <div class="scrollEnds"></div>
         </div> 
 
-        <div class="trivia">
-            <h2>Trivia Question</h2>
+<!-- question box -->
+        <div class="QuestionBox">
+            <h3 class="question">WHAT IS THE ANSWER TO THIS QUESTION, YE SCALLYWAG?</h3>
+            <div class="answers">
+                <p class="answer">ANSWER1</p>
+                <p class="answer">ANSWER2</p>
+                <p class="answer">ANSWER3</p>
+                <p class="answer">ANSWER4</p>
+            </div>
         </div>
     </div>
 </body>
