@@ -44,7 +44,7 @@ body {
     /* width: 70%; */
     width: calc(80vh * 1100/672);
     /* aspect-ratio:1100/672; */
-    background-color: brown; 
+    /* background-color: brown;  */
     /* background-image: url('assets/background.png'); */
     /* background-size: 100% 100% ;
     background-repeat: no-repeat; */
@@ -69,8 +69,12 @@ body {
 .scrollEnds{
     height: 11vh;
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     flex-shrink:0;
+
+    background-image: url('assets/ScrollEnd.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* .scrollEnds:hover{
