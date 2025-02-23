@@ -50,28 +50,42 @@ body {
     background-color: white;
 }
 
-.scrollEnds:hover{
+/* .scrollEnds:hover{
     height: 50%;
-}
+} */
 
 /* change */
-.scroll:hover {
+/* .scroll:hover {
     height: 40%;
-}
+} */
 
 .map {
+    /* position: static; */
+    height: 100%;
+    width: 100%;
+    background-image: url('assets/PixelartMap.png');
+    background-size: 100% 40vh ;
+    background-repeat: no-repeat;
+
+    /* transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: height;
+    transition-duration: 1s; */
+}
+
+.mapContainer {
     margin: 0;
     height: 90%;
     width: 90%;
-    background-image: url('assets/PixelartMap.png');
-    background-size: 100% 100% ;
-    background-repeat: no-repeat;
+
+    transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: height;
+    transition-duration: 1s;
 }
 
 /* change */
-.map:hover{
+.mapContainer:hover{
     background-image: none;
-    max-height: 0;
+    height: 0;
 }
 
 h1 {
