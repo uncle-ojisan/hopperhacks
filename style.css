@@ -7,6 +7,11 @@
     font-family: pixelFont;
     src: url(assets/PixelFont.ttf);
 }
+
+@font-face {
+    font-family: Baloo-Regular;
+    src: url(assets/Baloo-Regular.ttf);
+}
   
 
 html{
@@ -23,6 +28,8 @@ body {
     justify-content: center;
     align-items: center;
     margin:0px;
+
+    position: relative;
 }
 
 .title {
@@ -47,7 +54,7 @@ body {
 }   
 
 .header{
-    font-family: "Papyrus", Fantasy;
+    font-family: Baloo-Regular;
     max-height: fit-content;
 }
 
@@ -160,14 +167,94 @@ h1 {
     height: 10%;
     aspect-ratio: 1/1;
     background-size: contain;
+
+    transition-property: top left;
+    transition-duration: 1.25s;
 }
+
+.map.done button {
+    top:50% !important;
+    left:50% !important;
+}
+
+.PirateShip {
+    position: absolute;
+    z-index:3;
+    background-image: url('./assets/PirateShip.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%) scale(0,0);
+    width:75%;
+    height:75%;
+    margin:0;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.PirateShip.done {
+    transform:translate(-50%, -50%) scale(1, 1);
+}
+
+@keyframes floating {
+    0% {
+      transform: translate(0, 0);
+    }
+  
+    25% {
+      transform: translate(10px, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 10px);
+    }
+  
+    75% {
+      transform: translate(0, 10px);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+}
+
 
 .map button:hover{
-    color: red;
-    background-color: black;
+    /* color: red;
+    background-color: black; */
+    animation: floating .25s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#b1{
+.map button:hover .redX.crossed {
+    animation:unset;
+}
+
+.redX {
+    background-image: url('./assets/red_x.png');
+    background-color: transparent;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width:150%;
+    height:150%;
+    transform:translate(-25%,-25%) scale(0,0);
+    float:left;
+    opacity: 0;
+    transition-property: opacity transform;
+    transition-duration: .5s;
+}
+
+.redX.crossed {
+    opacity:1;
+    cursor:pointer;
+    transform:translate(-25%,-25%) scale(1,1);
+}
+
+#Chile{
     top: 65%;
     left: 27%;
     background-image: url('./assets/AnchorB.png');
@@ -175,36 +262,63 @@ h1 {
     
 }
 
-#b2{
+#Chile:hover {
+    background-image: url('./assets/AnchorG.png');
+}
+
+#Japan{
     top: 31%;
     left: 78.5%;
     background-image: url('./assets/CompassB.png');
 }
 
-#b3{
+#Japan:hover {
+    background-image: url('./assets/CompassG.png');
+}
+
+#Mexico{
     top: 40%;
     left: 20%;
     background-image: url('./assets/PirateFlagB.png');
 }
 
-#b4{
+#Mexico:hover {
+    background-image: url('./assets/PirateFlagG.png');
+}
+
+#Somalia{
     top: 47%;
     left: 60%;
     background-image: url('./assets/CannonB.png');
 }
 
-#b5{
+
+#Somalia:hover {
+    background-image: url('./assets/CannonG.png');
+}
+
+
+#Spain{
     top: 27%;
     left: 41%;
     background-image: url('./assets/SteeringWheelB.png');
 
 }
 
-#b6{
-    top: 85%;
-    left: 50%;
+#Spain:hover {
+    background-image: url('./assets/SteeringWheelG.png');
+}
+
+#Angola{
+    top: 55%;
+    left: 45%;
     background-image: url('./assets/TreasureChestClosedB.png');
 }
+
+#Angola:hover {
+    background-image: url('./assets/TreasureChestClosedG.png');
+}
+
 
 
 
