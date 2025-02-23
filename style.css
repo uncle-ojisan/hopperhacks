@@ -163,40 +163,40 @@ h1 {
 }
 
 #b1{
-    top: 10%;
-    left: 0%;
+    top: 65%;
+    left: 27%;
     background-image: url('./assets/AnchorB.png');
     
     
 }
 
 #b2{
-    top: 10%;
-    left: 10%;
+    top: 31%;
+    left: 78.5%;
     background-image: url('./assets/CompassB.png');
 }
 
 #b3{
-    top: 10%;
+    top: 40%;
     left: 20%;
     background-image: url('./assets/PirateFlagB.png');
 }
 
 #b4{
-    top: 10%;
-    left: 30%;
+    top: 47%;
+    left: 60%;
     background-image: url('./assets/CannonB.png');
 }
 
 #b5{
-    top: 10%;
-    left: 40%;
+    top: 27%;
+    left: 41%;
     background-image: url('./assets/SteeringWheelB.png');
 
 }
 
 #b6{
-    top: 10%;
+    top: 85%;
     left: 50%;
     background-image: url('./assets/TreasureChestClosedB.png');
 }
