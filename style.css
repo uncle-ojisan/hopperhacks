@@ -17,6 +17,7 @@ body {
 .title {
     text-transform: uppercase;
     color: saddlebrown;
+    font-weight: bold;
 }
 
 
