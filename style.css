@@ -1,7 +1,12 @@
 @font-face {
     font-family: pixelFontBold;
     src: url(assets/PixelFontBold.ttf);
-  }
+}
+
+@font-face {
+    font-family: pixelFont;
+    src: url(assets/PixelFont.ttf);
+}
   
 
 html{
@@ -71,13 +76,13 @@ body {
 
 }
 
-/* .scroll.folded{
-    height: 22vh;
-} */
-
-.scroll:hover{
+.scroll.folded{
     height: 22vh;
 }
+
+/* .scroll:hover{
+    height: 22vh;
+} */
 
 /* add background img for top and bottom of scroll*/
 .scrollEnds{
@@ -232,7 +237,7 @@ h1 {
 
 .QuestionBox {
 
-    border: 11px double #ff6550;
+    /* border: 11px double #ff6550; */
     height: 5%;
     width: fit-content;
     padding-right: 20px;
@@ -252,7 +257,7 @@ h1 {
 .QuestionBox>div {
     width:100%;
     height:100%;
-    border: 11px dotted #00eeff;
+    /* border: 11px dotted #00eeff; */
 
     margin:0px;
 }
@@ -273,11 +278,15 @@ h1 {
     /* align-items: center; */
     justify-content: center;
     
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+
 
 }
 
 .messageArea div {
-    border: 11px dotted #4c00ff;
+    /* border: 11px dotted #4c00ff; */
     width:70%;
     height:60%;
 
@@ -307,6 +316,12 @@ h1 {
     align-items: center;
     text-align: center;
 
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+
+    flex-shrink:0;
+
 }
 
 .answersArea {
@@ -332,12 +347,15 @@ h1 {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+    /* color: red; */
+
+    /* filter: invert(51%) sepia(48%) saturate(3476%) hue-rotate(326deg) brightness(115%) contrast(112%); */
     
     width:80%;
     height:50%;
 
     opacity:1;
-    transition-property: opacity;
+    transition-property: opacity filter;
     transition-duration: .5s;
 
     display:flex;
@@ -346,19 +364,64 @@ h1 {
 
     cursor: grab;
     
+    position: relative;
+    opacity:0;
 }
 
 
 .answer p{
     position: absolute;
     text-align: center;
-    font-family: pixelFontBold;
-
-    
+    font-family: pixelFont;
+    font-size:20pt;
+    width:100%;
+    word-wrap: break-word;
     
 }
 
-.answer.visible {
+.gridPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+.placeName {
+    font-family: pixelFontBold;
+    font-size:20pt;
+    /* position: absolute; */
+
+    opacity:0;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.checkHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.checkmark {
+    background-image: url(assets/Checkmark.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width:50px;
+    height:50px;
+
+    opacity:0;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+.visible {
     opacity: 1;
 }
 
