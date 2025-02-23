@@ -563,6 +563,9 @@ const endingMessages = [
 function getQuestions(place) {
     const placeQuestions = questions[place];
     const shuffled = [...placeQuestions].sort(()=> 0.5 - Math.random());
+    shuffled.forEach(question=>{
+        question[1] = [...question[1]].sort(()=>0.5-Math.random());
+    })
     return shuffled;
 }
 
@@ -570,7 +573,7 @@ async function typewrite(box, text) {
     box.textContent = ""
     for (let i = 0; i < text.length; i++) {
         box.textContent += text[i];
-        await delay(10);
+        await delay(30);
     }
 }
 
@@ -610,7 +613,7 @@ async function finishAnswer(correct) {
         checkmarks[correctCount].classList.add("visible");
         correctCount++
     };
-    typewrite(messageBox, explanation);
+    await typewrite(messageBox, explanation);
     await delay(2000);
     await reverseTypewrite(messageBox);
 
@@ -629,7 +632,7 @@ async function finishAnswer(correct) {
             await delay(1000);
             document.getElementById(currentPlaceName).childNodes[1].classList.add("crossed");
 
-            if (completed == 6) {
+            if (completedCount == 6) {
                 end();
             }
         }

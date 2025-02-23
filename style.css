@@ -79,7 +79,7 @@ body {
 
     transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-property: height;
-    transition-duration: 3s;
+    transition-duration: 2s;
 
 }
 
