@@ -1,3 +1,9 @@
+@font-face {
+    font-family: pixelFontBold;
+    src: url(assets/PixelFontBold.ttf);
+  }
+  
+
 html{
     background-color: blanchedalmond;
     overflow-y: scroll;
@@ -65,7 +71,7 @@ body {
 
 }
 
-.scroll:hover{
+.scroll.folded{
     /* background-image: none; */
     height: 22vh;
 }
@@ -196,17 +202,9 @@ h1 {
 
 
 
-/* questoin box */
-.QuestionBox {
-    border: 11px double #ff6550;
-    height: 5%;
-    width: fit-content;
-    padding-right: 20px;
-}
-
-.QuestionBox:hover{
+/* .QuestionBox:hover{
    height: auto;
-}
+} */
 
 .question {
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -229,11 +227,98 @@ h1 {
     
 }
 
-.answer:hover {
+.QuestionBox {
+
+    border: 11px double #ff6550;
+    height: 5%;
+    width: fit-content;
+    padding-right: 20px;
+
+    gap:1px;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+
+    width:50%;
+    height:100%;
+}
+
+.QuestionBox div {
+    width:100%;
+    height:100%;
+    border: 11px dotted #00eeff;
+
+    margin:0px;
+}
+
+.gridPlaceholder {
+    grid-area: 1 / 1 / 4 / 3;
+}
+
+.messageArea {
+    grid-area: 1 / 3 / 4 / 7;
+    background-image: url('assets/MessageBubble.png');
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    
+
+}
+
+.messageArea div {
+    border: 11px dotted #4c00ff;
+    width:70%;
+    height:60%;
+
+    margin-top:3%;
+    position: relative;
+}
+
+.messageArea div p {
+    margin:0;
+    position: absolute;
+    text-align: center;
+    font-family: pixelFontBold;
+    font-size: 30pt;
+    
+    max-width:100%;
+    word-wrap: break-word;
+}
+
+.pirateArea {
+    grid-area: 4 / 1 / 7 / 3;
+
+    background-image: url('assets/PirateTalking.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    align-items: center;
+    text-align: center;
+
+}
+
+.answersArea {
+    grid-area: 4 / 3 / 7 / 7;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+
+
+/* .answer:hover {
     background-color: red;
     
     cursor:pointer;
-}
+} */
 
 .answer {
     padding:10px;

@@ -4,6 +4,9 @@ const questionText = document.querySelector(".question");
 const answers = document.querySelectorAll(".answer");
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
+let messageContainer = document.querySelector(".messageArea div");
+let messageText = messageContainer.querySelector("p");
+
 
 
 const questions = {
@@ -63,5 +66,20 @@ mapButtons.forEach(button => {
 });
 
 
-writeQuestion(getQuestions("Somalia")[0]);
+// function resizeText() {
+//     let fontSize = 10;
+//     messageText.style.fontSize = fontSize + "px";
+
+//     console.log(messageText.scrollWidth < messageContainer.clientWidth)
+//     while (messageText.scrollWidth < messageContainer.clientWidth && messageText.scrollHeight < messageContainer.clientHeight) {
+//         console.log('hi');
+//         fontSize++;
+//         messageText.style.fontSize = fontSize + "px";
+//     }
+// }
+
+// window.addEventListener("resize", resizeText);
+// resizeText();
+
+// writeQuestion(getQuestions("Somalia")[0]);
 // console.log(questionText);
